@@ -11,6 +11,7 @@
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "func-style": ["error", "expression"],
+    "tailwindcss/classnames-order": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "error",
     "react/jsx-handler-names": [

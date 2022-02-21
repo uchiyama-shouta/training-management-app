@@ -1,0 +1,21 @@
+schema: 
+  - https://delicate-scorpion-63.hasura.app/v1/graphql:
+      headers:
+        x-hasura-admin-secret: ${X_HASURA_ADMIN_SECRET}
+# documents:
+#   - ./src/**/*.graphql
+overwrite: true
+generates:
+  ./src/_generated_/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      skipTypename: false
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      scalars:
+          timestamptz: string
+          uuid: string
